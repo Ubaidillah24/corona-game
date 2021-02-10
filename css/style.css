@@ -1,0 +1,82 @@
+body {
+  background-color: #dddddd;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: arial;
+  margin: 20px;
+  color: rgba(116, 74, 47, 0.897);
+}
+
+h2 {
+  font-size: 60px;
+  text-align: center;
+  font-family: arial;
+  margin: auto;
+  color: rgba(116, 74, 47, 0.897);
+}
+
+button {
+  display: block;
+  margin: auto;
+  background-color: rgba(116, 74, 47, 0.897);
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  font-family: arial;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.container-skor {
+  width: 600px;
+  margin: auto;
+  display: flex;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/spray1.png), auto;
+}
+
+.container:active {
+  cursor: url(../img/spray2.png), auto;
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.virus {
+  width: 100%;
+  height: 100%;
+  background: url(../img/virus.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .virus {
+  top: -15px;
+}
